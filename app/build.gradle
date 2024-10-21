@@ -5,7 +5,7 @@ android {
     buildToolsVersion "30.0.1"
 
     defaultConfig {
-        applicationId "id.yusufrizalh.sqliteandroid"
+        applicationId "id.niluh.sqliteandroid"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1

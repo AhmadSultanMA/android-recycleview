@@ -1,4 +1,4 @@
-package id.yusufrizalh.sqliteandroid;
+package id.niluh.sqliteandroid;
 
 import android.view.View;
 import android.widget.ImageView;

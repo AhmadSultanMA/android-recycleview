@@ -1,4 +1,4 @@
-package id.yusufrizalh.sqliteandroid;
+package id.niluh.sqliteandroid;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("id.yusufrizalh.sqliteandroid", appContext.getPackageName());
+        assertEquals("id.niluh.sqliteandroid", appContext.getPackageName());
     }
 }

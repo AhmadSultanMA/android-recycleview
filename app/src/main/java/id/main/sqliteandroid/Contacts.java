@@ -1,4 +1,4 @@
-package id.yusufrizalh.sqliteandroid;
+package id.niluh.sqliteandroid;
 
 public class Contacts {
     private int id;

@@ -1,4 +1,4 @@
-package id.yusufrizalh.sqliteandroid;
+package id.niluh.sqliteandroid;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -43,8 +43,8 @@ public class SqliteDatabase extends SQLiteOpenHelper {
     }
 
     /*
-     operasional dasar tabel pada database: Create Read Update Delete (CRUD)
-    */
+     * operasional dasar tabel pada database: Create Read Update Delete (CRUD)
+     */
 
     // 1: Read / SELECT
     ArrayList<Contacts> listContacts() {
@@ -58,8 +58,7 @@ public class SqliteDatabase extends SQLiteOpenHelper {
                 String name = cursor.getString(1);
                 String phone = cursor.getString(2);
                 storeContacts.add(new Contacts(id, name, phone));
-            }
-            while (cursor.moveToNext());
+            } while (cursor.moveToNext());
         }
         cursor.close();
         return storeContacts;
@@ -81,13 +80,13 @@ public class SqliteDatabase extends SQLiteOpenHelper {
         values.put(COLUMN_NO, contacts.getPhoneNumber());
         SQLiteDatabase db = this.getReadableDatabase();
         db.update(TABLE_CONTACTS, values, COLUMN_ID + " = ?",
-                new String[]{String.valueOf(contacts.getId())});
+                new String[] { String.valueOf(contacts.getId()) });
     }
 
     // 4: Delete / DELETE
     void deleteContact(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         db.delete(TABLE_CONTACTS, COLUMN_ID + " = ?",
-                new String[]{String.valueOf(id)});
+                new String[] { String.valueOf(id) });
     }
 }

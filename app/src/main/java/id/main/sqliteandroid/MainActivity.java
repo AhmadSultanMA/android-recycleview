@@ -1,4 +1,4 @@
-package id.yusufrizalh.sqliteandroid;
+package id.niluh.sqliteandroid;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
         myDatabase = new SqliteDatabase(this);
         ArrayList<Contacts> allContacts = myDatabase.listContacts();
         // melihat semua isi tabel
-        if (allContacts.size() > 0){    // tabel ada isinya
+        if (allContacts.size() > 0) { // tabel ada isinya
             contactView.setVisibility(View.VISIBLE);
             // gunakan adapter utk menampilkan isi tabel kedalam contactView/RecyclerView
             ContactAdapter myAdapter = new ContactAdapter(this, allContacts);
             contactView.setAdapter(myAdapter);
-        } else {    // tabel tidak ada isi/kosong
+        } else { // tabel tidak ada isi/kosong
             contactView.setVisibility(View.GONE);
             Toast.makeText(this,
                     "Tidak ada data dalam tabel contacts!", Toast.LENGTH_SHORT).show();
